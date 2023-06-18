@@ -1,2 +1,2 @@
-# HospitalWebsite
-Creating hospital website wih HTML, CSS, Python, and Django. 
+# Hospital Website
+Creation of hospital website with HTML, CSS, Python, and Django. 
