@@ -1,0 +1,100 @@
+{% extends 'navigation.html' %}
+{% block title %}
+<title>Appointment</title>
+{% endblock %}
+
+{% block content %}
+    <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;padding-top: 100px;">Book an Appointment</h1>
+    <hr>
+    <div class="appointment" style="padding-top: 100px;">
+    <form class="row g-2" style="padding-top:20px;" action="{% url 'appointment' %}" method="POST">
+        {% csrf_token %}
+        <div class="col-md-4">
+            <label for="fname" class="form-label">First Name:</label>
+            <input id="fname" type="text" class="form-control" placeholder="First Name" name="fname" required>
+        </div>
+        <div class="col-md-4">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" placeholder="last Name" name="lname" required>
+        </div>
+        <p></p>
+        <div class="col-md-4">
+            <label for="age" class="form-label">Age:</label>
+            <input id="age" type="number" class="form-control" placeholder="Age" name="age" required>
+        </div>
+        <div class="col-md-4">
+            <label  for="phone" class="form-label">Phone Number:</label>
+            <input id="phone" type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" size="11" placeholder="0123456789" name="phone" required>
+        </div>
+        <p></p>
+        <div class="col-md-4">
+            <label for="email" class="form-label">Email Id:</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <p></p>
+        <div class="col-md-4">
+            <label for="department" class="form-label">Select Department for CheckUp:</label>
+            <select id="department" class="form-select" name="department">
+                <option value="general" name="department" selected>General CheckUp</option>
+                <option value="neuro" name="department">Neuro Surgery</option>
+                <option value="cardiology" name="department">Cardiology</option>
+                <option value="pulmonology" name="department">Pulmonology</option>
+                <option value="psychiatry" name="department">Psychiatry</option>
+                <option value="orthopaedics" name="department">Orthopaedics</option>
+            </select>
+        </div>
+        <p></p>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Gender:</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="none" value="none">
+                    <label class="form-check-label" for="none">None</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-4 pt-0">Have you made an appointment before:</legend>
+            <div class="col-sm-1">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="check" id="yes" value="yes">
+                    <label class="form-check-label" for="yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="check" id="no" value="no">
+                    <label class="form-check-label" for="no">No</label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="col-md-4">
+            <label for="file">Do you have any previous health reports:</label>
+            <input id="file" type="file" name="file">
+        </div>
+        <p></p>
+        <div class="col-md-4">
+            <label for="datetime">Enter Appointment Date and Time:</label>
+            <input id="datetime" type="datetime-local" name="datetime">
+        </div>
+        <div class="col-md-10">
+            <label for="information">Please write your health problem in detail:</label>
+            <br>
+            <textarea id="information" rows="10" cols="90" name="textarea"></textarea>
+        </div>
+        <p></p>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+        <div class="col-auto">
+            <button type="reset" class="btn btn-danger" value="Clear">Clear</button>
+        </div>
+    </form>
+    </div>
+{% endblock %}

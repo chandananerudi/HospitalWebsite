@@ -1,0 +1,30 @@
+{% extends 'navigation.html' %}
+{% block title %}
+<title>Orthopaedics</title>
+{% endblock %}
+{% block content %}
+    <form class="orthopaedics" style="padding-top:100px;">
+    <div class="orthopaedics_explanation">
+        <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;">Orthopaedics</h1>
+        <hr>
+        <p style="padding-top:80px;padding-left:50px;">
+            Persistent pain is one of the most common reasons people seek medical help from orthopedic doctors. If you have persistent pain lasting more than three months or severe pain does not subside with home treatment, you should consider making an appointment with an orthopedic doctor.
+        </p>
+        <ul style="padding-left:80px;">
+            <strong>You may consider seeing an orthopedic physician because:</strong>
+            <li>You're experiencing a noticeable decrease in your range of motion.</li>
+            <li>You can't walk without pain or discomfort.</li>
+            <li>You have moderate or advanced arthritis of the knee or hip.</li>
+            <li>You have progressive hip or knee pain that worsens upon standing.</li>
+            <li>Your daily life is affected by your pain and discomfort.</li>
+            <li>You have chronic pain(lasting more that 12 weeks).</li>
+            <li>You have a soft tissue injury that has not improved after several days.</li>
+        </ul>
+    </div>
+    <div class="appointment_btn">
+            <a href="{% url 'appointment' %}" target="_blank">
+                <input id="book_app" type="button" name="book_app" value="Book an Appointment">
+            </a>
+        </div>
+    </form>
+{% endblock %}

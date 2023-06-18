@@ -1,0 +1,90 @@
+{% extends 'navigation.html' %}
+{% block  title %}<title>Mythri Hospital</title>{% endblock %}
+
+{% block content %}
+    <div id="carouselExampleAutoPlaying" class="carousel slide" data-bs-ride="carousel" style="padding-top:80px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                {% load static %}
+                <img src="{% static 'images/mythri2.jpg' %}" class="d-block w-100" alt="image unavailable" style="height:600px;">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                {% load static %}
+                <img src="{% static 'images/main.jpg' %}" class="d-block w-100" alt="image unavailable" style="height:600px;">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                {% load static %}
+                <img src="{% static 'images/main2.jpg' %}" class="d-block w-100" alt="image unavailable" style=height:600px;>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container text-center" id="departments_section" style="padding-top:200px">
+        <h1>Departments</h1>
+        <div class="row " style="padding-top:100px;">
+            <div class="col">
+                <a href="{% url 'general' %}" target="_blank" ><img src="{% static 'images/general.jpg' %}" style="width:300px;height:200px;"></a>
+            </div>
+            <div class="col">
+                <a href="{% url 'cardiology' %}" target="_blank"><img src="{% static 'images/cardiology.jpg' %}" style="width:300px;height:200px;"></a>
+            </div>
+            <div class="col">
+                <a href="{% url 'pulmonology' %}" target="_blank"><img src="{% static 'images/pulmonology.jpg' %}" style="width:300px;height:200px;"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'general' %}" target="_blank">General CheckUp</a>
+            </div>
+            <div class="col">
+                <a href="{% url 'cardiology' %}" target="_blank">Cardiology</a>
+            </div>
+            <div class="col">
+                <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'psychiatry' %}" target="_blank"><img src="{% static 'images/psychiatry.jpg' %}" style="width:300px;height:200px;"></a>
+            </div>
+            <div class="col">
+                <a href="{% url 'neuro' %}" target="_blank"><img src="{% static 'images/neuro.jpg' %}" style="width:300px;height:200px;"></a>
+            </div>
+            <div class="col">
+                <a href="{% url 'orthopaedics' %}" target="_blank"><img src="{% static 'images/orthopaedics.jpg'%}" style="width:300px;height:200px;"></a>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:100px;">
+            <div class="col">
+                <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+            </div>
+            <div class="col">
+                <a href="{% url 'neuro' %}" target="_blank">Neuro Surgery</a>
+            </div>
+            <div class="col">
+                <a href="{% url 'orthopaedics' %}" target="_blank">Orthopaedics</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+{% endblock %}
+

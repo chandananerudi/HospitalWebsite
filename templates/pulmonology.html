@@ -1,0 +1,44 @@
+{% extends 'navigation.html' %}
+{% block title %}
+<title>pulmonology</title>
+{% endblock %}
+
+{% block content %}
+<form class="pulmonology" style="padding-top:100px;">
+<div class="pulmonology_explanation">
+    <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;">Pulmonology</h1>
+    <hr>
+    <p style="padding-top:80px;padding-left:50px">
+        If you have cough that lasts for a long time, or you have trouble breathing, your regular healthcare provider may suggest you see a pulmonologist. This specialist is an expert in diagnosing and treating lung-related health conditions. This is important especially when the condition may need long-term management.
+    </p>
+    <p style="padding-left:80px;">
+        If you have symptoms that your regular healthcare provider isn't able to help you with, or if they think you would be better off seeing a specialist, they might refer you to a pulmonologist. Some of these signs and symptoms might include:
+    </p>
+    <ul style="padding-left:80px;">
+        <li>A cough that doesn't improve over time</li>
+        <li>Shortness of breath</li>
+        <li>Chest pain or tightness</li>
+        <li>Wheezing</li>
+        <li>Sleep apnea symptoms, like extreme tiredness or loud snoring.</li>
+        <li>Dizziness</li>
+    </ul>
+    <p style="padding-left: 80px;">
+        Your healthcare provider might order some tests to help with diagnosis and treatment.
+    </p>
+    <strong style="padding-left:80px;">These might include:</strong>
+    <ul style="padding-left:80px;">
+        <li>Blood analysis</li>
+        <li>Imaging tests like chest X-rays or computed tomography(CT) scans.</li>
+        <li>Pulmonary function tests.</li>
+        <li>Spirometry.</li>
+        <li>Bronchoscopy.</li>
+        <li>Sleep studies</li>
+    </ul>
+</div>
+<div class="appointment_btn">
+    <a href="{% url 'appointment' %}" target="_blank">
+        <input id="book_app" type="button" name="book_app" value="Book an Appointment">
+    </a>
+</div>
+</form>
+{% endblock %}

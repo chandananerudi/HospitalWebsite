@@ -1,0 +1,42 @@
+.navbar{
+    width: 100%;
+    border-bottom: 12px solid palegreen;
+}
+#home, #department, #services, #contact, #book{
+    color: white;
+    font-size: 1.3vw;
+}
+#home:hover, #department:hover, #services:hover, #contact:hover, #book:hover{
+    color: palegreen;
+    font-size: 1.6vw;
+}
+.navbar-nav{
+    padding-left: 200px;
+}
+
+.appointment{
+    padding: 80px 10px 80px 250px;
+    border: 10px solid cadetblue;
+    margin: 100px 80px 20px 100px;
+    outline: 5px outset pink;
+}
+#book_app{
+    margin: 100px 400px 100px 600px;
+    background-color: cadetblue;
+    border: 5px solid pink;
+    width: 200px;
+    height: 60px;
+    font: 20px solid black;
+}
+.site-footer{
+    position: relative;
+    width: 100%;
+    background-color: royalblue;
+    border-top: 10px solid palegreen;
+}
+.contact_details{
+    padding: 80px 10px 80px 250px;
+    border: 10px solid cadetblue;
+    margin: 100px 80px 20px 100px;
+    outline: 5px outset pink;
+}

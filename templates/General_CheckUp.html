@@ -1,0 +1,49 @@
+{% extends 'navigation.html' %}
+{% block  title %}
+<title>General CheckUp</title>
+{% endblock %}
+
+{% block content %}
+    <form class="explanation" style="padding-top:150px">
+        <div class="general_exp">
+            <p id="general_explanation"></p>
+            <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;">General CheckUp</h1>
+            <hr>
+            <p style="padding-top:80px;padding-left:50px;">
+                The well-check is focused on preventive car instead of being focused on problems. It's also an active part of our pursuit of personalized healthcare because it helps us focus on your specific health status and need.
+            </p>
+            <ol style="padding-left:80px;">
+                <strong><li>Measure Height and Weight</li></strong>
+                <p>These standard measurements provide a baseline and a way to monitor your health. For example, big changes in weight can indicate health problems.</p>
+                <strong><li>Check vital signs</li></strong>
+                <p>You know the routine-blood pressure and heart create especially. These are important for everyone to monitor, but especially if you have a family history of heart disease.</p>
+                <strong><li>Some things the doctor needs to know are</li></strong>
+                <ul>
+                    <li>Do you feel any unusual discomfort?</li>
+                    <li>Where is the discomfort/pain located?</li>
+                    <li>What does the pain feel like? Is it dull, achy, pressure or sharp?</li>
+                    <li>How long does the pain last? Does it come and go? Does it stay for a long time?</li>
+                    <li>Do you notice that anything causes the discomfort? For example, do you feel it after eating, after exercise or at night?</li>
+                    What relieves the discomfort> Rest, medications, position></li>
+                </ul>
+                <strong><li>please Bring the following with you to the appointment:</li></strong>
+                <ul>
+                    <li>Current medication and allergy list(include vitamins and herbal supplements).</li>
+                    <li>List of symptoms-what they are, when the occur, how long they last and what relieves them.</li>
+                    <li>Results from prior test and lab work (including films and reports).</li>
+                    <li>Any measurements your doctor has asked you to keep track of, such as blood pressure, blood sugar or daily weight readings.</li>
+                    <li>Medical and surgical history (a record of your past diagnoses, treatments and procedures).</li>
+                    <li>Questions you would like answered.</li>
+                    <li>A list of you current doctors, including their names, addresses, phone numbers and fax numbers. Please let us know if you would like reports sent to those physicians.</li>
+                </ul>
+                <p></p>
+            </ol>
+        </div>
+        <div class="appointment_btn">
+            <a href="{% url 'appointment' %}" target="_blank">
+                <input id="book_app" type="button" name="book_app" value="Book an Appointment">
+            </a>
+        </div>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'navigation.html' %}
+{% block title %}
+<title>Cardiology</title>
+{% endblock %}
+
+{% block content %}
+    <form class="cardiology" style="padding-top:100px;">
+        <div class="cardiology_explanation">
+            <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;">Cardiologist</h1>
+            <hr>
+            <p style="padding-top:80px;padding-left:50px;">
+                Your primary care provider may refer you to a cardiologist if you have a problem with your heart or blood vessels that needs extra care. If you're feeling pain in your chest, dizziness or shortness of breath, you may need to see a cardiologist. Your cardiologist may keep working with you for a long time as they monitor your conditions.
+            </p>
+            <strong style="padding-left:80px;">What to expect at a cardiologist appointment</strong>
+            <p style="padding-left:80px;">
+                A cardiologist will do a physical exam, paying special attention to listening to your heart. they can hear how well blood flows throughout your heart and whether you have an irregular heart rhythm.
+            </p>
+            <p style="padding-left:80px;">
+                Be ready to answer questions about your family history and your own medical history. Your cardiology will want to know if your siblings, parents or others in your family have had heart problems. Having this information can help your cardiologist know what types of heart problems you could have.
+            </p>
+            <ul style="padding-left:80px;">
+                <strong >Your provider may ask:</strong>
+                <li>How long have you been having these symptoms?</li>
+                <li>What does it feel like when you have symptoms(mild pain, sharp pain)?</li>
+                <li>What were you doing when your symptoms started(resting, exerting yourself)?</li>
+                <li>Does anything help you feel better when you have symptoms?</li>
+                <li>Have you had a heart procedure or surgery in the past?</li>
+                <li>Do you have records of any scans?</li>
+                <li>What medicines are you taking now?</li>
+            </ul>
+        </div>
+        <div class="appointment_btn">
+            <a href="{% url 'appointment' %}" target="_blank">
+                <input id="book_app" type="button" name="book_app" value="Book an Appointment">
+            </a>
+        </div>
+    </form>
+{% endblock %}

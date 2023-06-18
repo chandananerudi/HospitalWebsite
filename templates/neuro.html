@@ -1,0 +1,37 @@
+{% extends 'navigation.html' %}
+{% block title %}
+<title>Neurologist</title>
+{% endblock %}
+
+{% block content %}
+<form class="neuro" style="padding-top:100px;">
+<div class="neuro_explanation">
+    <h1 style="color:cadetblue;text-shadow:2px 2px 2px pink;text-align:center;">Neurologist</h1>
+    <hr>
+    <p style="padding-top:80px;padding-left:50px;">
+        You may experience numbness or tingling in your arms, hands, legs or feet for many reasons, like that "pins and needles" feeling you get when you sit too long, or when your circulation gets cut off wearing something tight.
+    </p>
+    <ul style="padding-left:80px;">
+        <strong>See a neurologist if you experience the following, especially if you have a family history of neurological issues:</strong>
+        <li>Numbness or weakness that comes on suddenly or happens on one side of the body.</li>
+        <li>Persistent(over weeks or months) or worsening numbness.</li>
+        <li>Chronic muscle weakness or a rapid decline in muscle strength.</li>
+        <li>A weak handgrip that's affecting your ability to eat, write or perform other daily activities.</li>
+        <li>Foot drop, or difficulty lifting the front of your foot, which may cause it to drag.</li>
+        <li>Lingering numbness and/or weakness after a stroke or injury.</li>
+        <li>Numbness and/or weakness accompanied by other neurological symptoms, such as nerve pain or burning.</li>
+    </ul>
+    <ul style="padding-left:80px;">
+        <strong>Sleep problems, See a neurologist if you experience any of the following:</strong>
+        <li>Prolonged periods of excessive tiredness during the day after getting a full night's sleep.</li>
+        <li>Frequently falling asleep in relaxing surroundings.</li>
+        <li>Frequent difficulty falling or staying asleep, especially if you are also having nightmares.</li>
+    </ul>
+</div>
+<div class="appointment_btn">
+    <a href="{% url 'appointment' %}" target="_blank">
+        <input id="book_app" type="button" name="book_app" value="Book an Appointment">
+    </a>
+</div>
+</form>
+{% endblock %}
